@@ -108,11 +108,11 @@ Any non-openai params, will be treated as provider-specific params, and sent in 
 
 - `n`: *int (optional)* The number of images to generate. Must be between 1 and 10. For dall-e-3, only n=1 is supported.
 
-- `quality`: *string (optional)* The quality of the image that will be generated. hd creates images with finer details and greater consistency across the image. This param is only supported for dall-e-3.
+- `quality`: *string (optional)* The quality of the image that will be generated. `hd` creates images with finer details and greater consistency across the image for dall-e-3. gpt-image-1 supports `high`, `medium` and `low`. dall-e-2 only supports `standard`.
 
 - `response_format`: *string (optional)* The format in which the generated images are returned. Must be one of url or b64_json.
 
-- `size`: *string (optional)* The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024 for gpt-image-1. Must be one of 1024x1024, 1792x1024, or 1024x1792 for dall-e-3 models.
+- `size`: *string (optional)* The size of the generated images. Must be one of `1024x1024`, `1536x1024` (landscape), `1024x1536` (portrait), or `auto` (default value) for `gpt-image-1`, one of `256x256`, `512x512`, or `1024x1024` for `dall-e-2`, and one of `1024x1024`, `1792x1024`, or `1024x1792` for `dall-e-3`.
 
 - `timeout`: *integer* - The maximum time, in seconds, to wait for the API to respond. Defaults to 600 seconds (10 minutes).
 
